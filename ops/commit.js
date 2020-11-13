@@ -6,7 +6,7 @@ const {prepare_url} = require('./util')
 const mongoose = require('mongoose')
 const Commits = mongoose.model('Commits')
 
-const getComments = (manager, owner, repository)=> {
+const getCommits = (manager, owner, repository)=> {
     return new Promise((resolve, reject) => {
         if(!manager || !owner || !repository){
             reject(new Error('not enough arguments'))
@@ -71,7 +71,7 @@ const commitUpdateToDB = (commitData) => {
 // var manager = 'github'
 // var owner = 'ashwinbhatt'
 // var rep = 'Dataloaders'
-// getComments(manager, owner, rep).then(commitsData=> {
+// getCommits(manager, owner, rep).then(commitsData=> {
 //     return commitUpdateToDB(commitsData)
 // }).then(savedData=>{
 //     console.log(savedData)
@@ -80,6 +80,6 @@ const commitUpdateToDB = (commitData) => {
 // })
 
 module.exports = {
-    getComments: getComments,
+    getCommits: getCommits,
     commitUpdateToDB: commitUpdateToDB
 }

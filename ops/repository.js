@@ -37,10 +37,10 @@ const repositoryUpdateToDB = (repoData => {
         }
         const ret_repo= []
         repoData.forEach(repo => {
-            Repository.findOne({full_name: repo.full_name, manager: manager}).then( savedRepo=> {
+            Repository.findOne({full_name: repo.full_name, manager: repo.manager}).then( savedRepo=> {
                 // console.log(savedRepo)
                 if(!savedRepo){
-                    console.log('Repository not found Adding =>'+repo.full_name )
+                    console.log('Repository not found Adding =>'+repo.name )
                     reposity = new Repository(repo)
 
                     reposity.save().then(savedRepo=> {
@@ -50,7 +50,7 @@ const repositoryUpdateToDB = (repoData => {
                     })
                 }else{
                     ret_repo.push(savedRepo)
-                    console.log('Repository found : '+repo.full_name)
+                    console.log('Repository found : '+repo.name)
                 }
                 if(ret_repo.length == repoData.length){
                     resolve(ret_repo)

@@ -20,8 +20,6 @@ require('./models/commits')
 require('./models/repository')
 require('./models/user')
 
+//
+require('./update')
 
-// loading from functions from files
-require('./ops/user')
-require('./ops/repository')
-require('./ops/commit')

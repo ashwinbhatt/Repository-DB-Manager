@@ -45,7 +45,7 @@ const userUpdateToDB = (userData) => {
                     reject(err)
                 })
             }else{
-                console.log('User data found for '+manager)
+                console.log('User data found for '+userData.manager)
             }
         })
     })

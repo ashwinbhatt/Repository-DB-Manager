@@ -10,10 +10,13 @@ module.exports = (repositoryData, manager, owner) => {
     // console.log(repositoryData)
     const filterRepositoryData = []
     repositoryData.forEach(element => {
-        const filterRepo = standardiseData(repoStandard, element)
-        filterRepo['manager']= manager
-        filterRepo['owner'] = owner
-        filterRepositoryData.push(filterRepo)
+        if(element.owner.login == owner && !element.fork ){
+            const filterRepo = standardiseData(repoStandard, element)
+            filterRepo['manager']= manager
+            filterRepo['owner'] = owner
+            filterRepositoryData.push(filterRepo)
+        }
+            
     });
     return filterRepositoryData
 }

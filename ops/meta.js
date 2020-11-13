@@ -1,6 +1,6 @@
 module.exports = {
     github: {
-        TOKEN: 'token 2f2c857415c5394210d819ea4329a605a13be593',
+        // TOKEN: 'token 2f2c857415c5394210d819ea4329a605a13be593',
         manager: 'github',
         api_urls: {
             user: 'https://api.github.com/user',
