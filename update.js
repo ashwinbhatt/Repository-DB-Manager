@@ -35,5 +35,10 @@ const update = (manager) => {
 }
 
 
-var manager='github'
-update(manager)
+// var manager='github'
+// update(manager)
+
+
+module.exports = {
+    update: update
+}

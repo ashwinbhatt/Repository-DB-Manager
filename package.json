@@ -1,15 +1,28 @@
 {
-  "name": "Repository-DB-Manager",
+  "name": "repository-db-manager",
   "version": "1.0.0",
   "description": "Maintain database for repository from sources like github",
   "main": "app.js",
+  "dependencies": {
+    "mongoose": "^5.10.14",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ashwin Bhatt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwinbhatt/Repository-DB-Manager.git"
+  },
+  "keywords": [
+    "github",
+    "database"
+  ],
+  "author": "Ashwin Bhatt <bhatt.ashwin98@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "mongoose": "^5.10.13",
-    "node-fetch": "^2.6.1"
-  }
+  "bugs": {
+    "url": "https://github.com/ashwinbhatt/Repository-DB-Manager/issues"
+  },
+  "homepage": "https://github.com/ashwinbhatt/Repository-DB-Manager#readme"
 }

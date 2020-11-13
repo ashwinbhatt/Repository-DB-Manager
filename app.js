@@ -21,5 +21,8 @@ require('./models/repository')
 require('./models/user')
 
 //
-require('./update')
+const {update} = require('./update')
 
+module.exports = {
+    rdbm: update
+}
